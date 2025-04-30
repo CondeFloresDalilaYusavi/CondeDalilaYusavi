@@ -1,0 +1,28 @@
+def preparar_datos(info):
+    acumulador = ""
+    for caracter in info:
+        acumulador += caracter + "-"
+    return acumulador[:-1]  
+def mezcla_datos(datos1, datos2):
+    if datos1 > datos2:
+        return datos1 + datos2
+    elif datos1 == datos2:
+        return datos1 * 2
+    else:
+        return datos2 + datos1
+def ejecutar_programa() :
+    
+    info1 = input("Introduce la primera cadena de texto: ")
+    info2 = input("Introduce la segunda cadena de texto: ")
+    acumulador1 = preparar_datos(info1)
+    acumulador2 = preparar_datos(info2)
+    resultado_combinado = mezcla_datos(acumulador1, acumulador2)
+    print("Resultado no final:", resultado_combinado)
+
+    if info1 in info2:
+        print("Coincidencia Detectada")
+
+ejecutar_programa()
+
+
+#El programa por lo que me dì cuenta lo que hace es pedir 2 datos (cadenas) y si el dato 1 es mayor que el dato dos, los suma, si los datos son iguales te indica que detectò una coincidencia, ademàs si no son iguales los junta y les pone guiones para separar cada letra
