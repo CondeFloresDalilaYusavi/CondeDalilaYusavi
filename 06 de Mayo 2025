@@ -10,9 +10,16 @@ etiqueta_resultado.config(text=f"Hola (nombre), tienes (edad) años")
 ventana=tk.Tk()
 ventana.title("Mi primer app grafica")
 ventana.geometry("400*200")
+ventana.configure(bg="#800080")
 
-etiqueta=tk.Label(ventana, text="Ingresa tu nombre:")
+etiqueta=tk.Label(ventana, text="Ingresa tu nombre:", bg="#800080", fg="white")
 etiqueta_nombre.pack()
+
+entrada_nombre=tk.Entry(ventana)
+entrada_nombre.pack()
+
+etiqueta_edad=tk.Label(ventana, text="Ingresa tu edad:", bg="#800080", fg="white")
+etiqueta_edad.pack()
 
 entrada_edad=tk.Entry(ventana)
 entrada_edad.pack()
@@ -20,7 +27,13 @@ entrada_edad.pack()
 boton=tk.Button(ventana, text="Mostrar Saludo", command=saludar)
 boton.pack()
 
-etiqueta_resultado=tk.Label(ventana, text="")
+etiqueta_resultado=tk.Label(ventana, text="", bg="#800080", fg="white")
+etiqueta_resultado.pack()
+
+etiqueta_autor=tk.Label(ventana, text="Autor del programa: Dalila Yusavi Conde Flores", bg="#800080", fg="white")
+etiqueta_autor.pack()
+
+ventana.mainloop()
 etiqueta_resultado.pack()
 
 ventana.mainloop()
