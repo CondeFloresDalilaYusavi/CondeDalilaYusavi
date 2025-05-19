@@ -71,3 +71,5 @@ resultado.pack(pady=10)
 
 
 ventana.mainloop()
+
+#Este programa ya está hecho para que enumere los estudiantes y los muestre con el boton de "mostrar estudiantes"
